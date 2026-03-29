@@ -6,7 +6,7 @@ import { motion } from 'motion/react';
 import { useState } from 'react';
 
 const heroImage =
-  '/lagos-skyline.jpg';
+  '/business-meeting-hd.jpg';
 
 interface Video {
   id: number;
@@ -153,7 +153,7 @@ export function Testimonials() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative h-[400px] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[340px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img src={heroImage} alt="Témoignages clients" className="w-full h-full object-cover" />
           <div

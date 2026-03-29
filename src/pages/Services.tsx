@@ -10,34 +10,25 @@ const featuredOffers = [
     image: '/offers/destination-nigeria.jpg',
     title: 'Destination Nigeria',
     subtitle: 'Commerces · Industries · Technologies · Agricultures',
-    price: 'À partir de 1.400.000 FCFA',
+    price: 'À partir de 1.300.000 FCFA',
     whatsappMsg: 'Bonjour, je suis intéressé par l\'offre Destination Nigeria. Pouvez-vous m\'en dire plus ?',
     span: false,
   },
   {
     id: 2,
-    image: '/offers/voyage-7-jours.jpg',
-    title: 'Voyage Nigeria — 7 Jours',
-    subtitle: 'Séjour Découverte · Départ 5 Avril',
-    price: 'Forfait complet inclus',
-    whatsappMsg: 'Bonjour, je suis intéressé par le Voyage Nigeria Séjour Découverte 7 jours. Pouvez-vous m\'en dire plus ?',
-    span: false,
-  },
-  {
-    id: 3,
     image: '/offers/centre-kano-teal.jpg',
-    title: 'Centre Kano — Tourisme Textile',
-    subtitle: 'Industrie textile · Production · Sourcing',
-    price: 'À partir de 1.400.000 FCFA',
+    title: 'Centre Kano — Tourisme d\'Affaire',
+    subtitle: 'Industrie textile · Production · Sourcing · Kano & Lagos',
+    price: 'À partir de 1.300.000 FCFA',
     whatsappMsg: 'Bonjour, je suis intéressé par l\'offre Centre Kano Tourisme d\'affaire textile. Pouvez-vous m\'en dire plus ?',
     span: false,
   },
   {
-    id: 4,
+    id: 3,
     image: '/offers/centre-kano-dark.jpg',
     title: 'Centre Kano — Édition Spéciale',
     subtitle: 'Marchés Kano & Lagos · Fournisseurs directs',
-    price: 'À partir de 1.400.000 FCFA',
+    price: 'À partir de 1.300.000 FCFA',
     whatsappMsg: 'Bonjour, je suis intéressé par l\'offre Centre Kano édition spéciale. Pouvez-vous m\'en dire plus ?',
     span: false,
   },
@@ -45,7 +36,7 @@ const featuredOffers = [
 
 export function Services() {
   const servicesImage =
-    '/african-professionals.jpg';
+    '/lagos-skyline-hd.jpg';
 
   const services = [
     {
@@ -159,7 +150,7 @@ export function Services() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative h-[400px] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[340px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img src={servicesImage} alt="Our Services" className="w-full h-full object-cover" />
           <div

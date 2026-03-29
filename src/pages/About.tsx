@@ -6,7 +6,7 @@ import { motion } from 'motion/react';
 
 export function About() {
   const aboutImage =
-    '/libreville-aerial.webp';
+    '/new-york-skyline.jpg';
 
   const values = [
     {
@@ -36,7 +36,7 @@ export function About() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative h-[400px] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[340px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img src={aboutImage} alt="About The Bridge" className="w-full h-full object-cover" />
           <div

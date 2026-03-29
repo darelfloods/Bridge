@@ -19,31 +19,31 @@ import { WhatsAppButton } from '../components/WhatsAppButton';
 const slides = [
   {
     id: 1,
-    image: '/african-professionals.jpg',
+    image: '/new-york-skyline.jpg',
     headline: 'Vos projets,\nnotre pont vers\nle succès',
     subtitle: "Voyages d'affaires organisés vers le Nigeria, les États-Unis, Dubaï et le Ghana avec un accompagnement complet et personnalisé.",
   },
   {
     id: 2,
-    image: '/nigeria-building.jpg',
+    image: '/waterfront-city.jpg',
     headline: 'Des rencontres\nqui font\nla différence',
     subtitle: 'Nous vous connectons aux bons partenaires et aux meilleures opportunités commerciales en Afrique.',
   },
   {
     id: 3,
-    image: '/usa-statue.jpg',
+    image: '/lagos-sunset.jpg',
     headline: "L'excellence\ngabonaise\nau service du monde",
     subtitle: "Des professionnels engagés pour faire rayonner le Gabon sur la scène internationale des affaires.",
   },
   {
     id: 4,
-    image: '/libreville-aerial.webp',
+    image: '/libreville-landmark.jpg',
     headline: 'Des partenariats\nsolides pour\nvotre avenir',
     subtitle: 'Facilitez vos échanges commerciaux et développez des relations durables avec nos experts terrain.',
   },
   {
     id: 5,
-    image: '/libreville-boulevard.webp',
+    image: '/city-building.jpg',
     headline: "Au cœur de\nl'Afrique\ndes affaires",
     subtitle: 'Libreville, Lagos, Abuja — The Bridge ouvre les portes des marchés les plus dynamiques du continent.',
   },
@@ -106,7 +106,7 @@ function HeroSlider() {
     encodeURIComponent('Bonjour, je souhaite en savoir plus sur vos services.');
 
   return (
-    <section className="relative w-full overflow-hidden" style={{ height: 'min(700px, 90vh)' }}>
+    <section className="relative w-full overflow-hidden" style={{ height: 'min(600px, 85vh)' }}>
       <AnimatePresence initial={false} custom={direction}>
         <motion.div
           key={slides[current].id}
@@ -220,7 +220,7 @@ function HeroSlider() {
                   <img
                     src={slides[current].image}
                     alt="Slide visual"
-                    className="w-full h-full object-cover scale-110"
+                    className="w-full h-full object-cover"
                     style={{ filter: 'brightness(0.9)' }}
                   />
                   <div

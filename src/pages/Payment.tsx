@@ -42,7 +42,7 @@ export function Payment() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative h-[400px] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[340px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img src={paymentImage} alt="Payment" className="w-full h-full object-cover" />
           <div
