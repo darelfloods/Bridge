@@ -9,10 +9,10 @@ export function Header() {
   const navLinks = [
     { path: '/', label: 'Accueil' },
     { path: '/about', label: 'À propos' },
-    { path: '/services', label: 'Nos services' },
-    { path: '/testimonials', label: 'Témoignages' },
-    { path: '/payment', label: 'Paiement' },
     { path: '/contact', label: 'Contact' },
+    { path: '/services', label: 'Nos services' },
+    { path: '/payment', label: 'Paiement' },
+    { path: '/testimonials', label: 'Visite' },
   ];
 
   const isActive = (path: string) => location.pathname === path;
