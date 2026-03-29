@@ -2,7 +2,7 @@ import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 import { WhatsAppButton } from '../components/WhatsAppButton';
 import { motion } from 'motion/react';
-import { Plane, ShoppingBag, FileText, MapPin } from 'lucide-react';
+import { Plane, ShoppingBag, FileText, MapPin, Compass, GraduationCap, Car } from 'lucide-react';
 
 const featuredOffers = [
   {
@@ -59,8 +59,8 @@ export function Services() {
         'Hébergement en hôtel 4-5 étoiles',
         "Organisation de rendez-vous d'affaires",
         'Visite des centres textiles de Kano et Lagos',
-        'Transport sur place',
-        'Assistance et traduction',
+        'Transport et chauffeur',
+        'Assistante et interprète',
       ],
     },
     {
@@ -106,6 +106,50 @@ export function Services() {
         'Guide local expert',
         'Flexibilité totale',
         'Assistance 24/7',
+      ],
+    },
+    {
+      icon: <Compass className="w-12 h-12" />,
+      title: 'Aventure culturelle au Gabon',
+      description:
+        "Tourisme culturel afro-descendant pour les Américains souhaitant visiter et découvrir le Gabon — un séjour immersif pour renouer avec ses racines africaines.",
+      price: '4 100 dollars',
+      details: [
+        'Retraite spirituelle',
+        'B2B ou échange avec le marché et entrepreneurs gabonais',
+        'Placement dans des familles gabonaises pour immersion linguistique',
+        'Danses traditionnelles et visites touristiques — Lékoni, Mouanda, Franceville, visite des tortues',
+        'Visite de la chambre de commerce, incitations à faire des affaires en Afrique',
+        'Logement, alimentation et guide',
+      ],
+    },
+    {
+      icon: <GraduationCap className="w-12 h-12" />,
+      title: 'Formation industrielle',
+      description:
+        "Programmes de formation dans les secteurs clés de l'économie africaine pour développer vos compétences et créer des opportunités.",
+      price: 'Sur devis',
+      details: [
+        'Agriculture et agroalimentaire',
+        'Élevage',
+        'Coiffure et cosmétiques',
+        'Accompagnement pratique sur le terrain',
+        'Certification et suivi post-formation',
+      ],
+    },
+    {
+      icon: <Car className="w-12 h-12" />,
+      title: 'Commandes de voitures et pièces',
+      description:
+        "Service de commande et d'importation de voitures neuves, d'occasion et de pièces détachées depuis les États-Unis, Dubaï et d'Asie.",
+      price: 'Sur devis',
+      details: [
+        'Voitures neuves sur commande',
+        "Véhicules d'occasion sélectionnés",
+        'Pièces détachées neuves et d\'occasion',
+        'Gestion des formalités douanières',
+        'Livraison au Gabon et en Afrique',
+        'Conseil et accompagnement à l\'achat',
       ],
     },
   ];

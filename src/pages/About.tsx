@@ -76,14 +76,14 @@ export function About() {
                 nous avons développé une approche unique qui combine tourisme d'affaire et développement commercial.
               </p>
               <p>
-                Basés au Gabon et présents en Afrique, nous avons accompagné de nombreuses entreprises dans leur
+                Basé au Gabon, à Las Vegas et présent en Afrique, nous avons accompagné de nombreuses entreprises dans leur
                 expansion sur le continent africain. Notre connaissance approfondie des marchés locaux, des cultures
                 et des pratiques commerciales nous permet de faciliter vos projets avec efficacité.
               </p>
               <p>
                 Aujourd'hui, The Bridge est reconnu comme un partenaire de confiance pour tous ceux qui souhaitent
-                explorer les opportunités en Afrique, que ce soit dans le textile, l'industrie, les technologies
-                ou l'agriculture.
+                explorer les opportunités en Afrique, que ce soit dans le textile, l'industrie, les technologies,
+                l'agriculture, l'agroalimentaire, l'élevage ou les énergies solaires.
               </p>
             </div>
           </motion.div>
@@ -106,9 +106,10 @@ export function About() {
                 <h2 className="text-3xl font-bold" style={{ color: '#1C1C1C' }}>Notre mission</h2>
               </div>
               <p className="text-gray-700 text-lg leading-relaxed">
-                Faciliter l'accès aux opportunités d'affaires en Afrique en offrant un accompagnement personnalisé,
-                des connexions stratégiques et une expertise locale. Nous aidons nos clients à naviguer avec confiance
-                dans les marchés africains et à concrétiser leurs projets professionnels.
+                Faciliter l'accès aux opportunités culturelles et d'affaires en Afrique, aux États-Unis et à Dubaï
+                en offrant un accompagnement personnalisé, des connexions stratégiques et une expertise locale.
+                Nous aidons nos clients à naviguer avec confiance dans les marchés africains et à concrétiser
+                leurs projets professionnels.
               </p>
             </motion.div>
 
@@ -126,7 +127,9 @@ export function About() {
               <p className="text-gray-700 text-lg leading-relaxed">
                 Devenir le leader du tourisme d'affaire et du développement commercial en Afrique, reconnu pour
                 notre capacité à créer des ponts durables entre les continents. Nous ambitionnons d'être le
-                partenaire privilégié de toute entreprise souhaitant réussir sur le marché africain.
+                partenaire privilégié de toute entreprise souhaitant réussir sur le marché africain. Sans oublier
+                que notre vision est d'être un pont culturel entre les afro-descendants Américains et les
+                afro-descendants Africains.
               </p>
             </motion.div>
           </div>

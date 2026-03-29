@@ -10,6 +10,7 @@ import {
   Globe,
   TrendingUp,
   Users,
+  Compass,
 } from 'lucide-react';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
@@ -20,7 +21,7 @@ const slides = [
     id: 1,
     image: '/african-professionals.jpg',
     headline: 'Vos projets,\nnotre pont vers\nle succès',
-    subtitle: "Voyages d'affaires organisés vers le Nigeria avec un accompagnement complet et personnalisé.",
+    subtitle: "Voyages d'affaires organisés vers le Nigeria, les États-Unis, Dubaï et le Ghana avec un accompagnement complet et personnalisé.",
   },
   {
     id: 2,
@@ -53,6 +54,11 @@ const services = [
     icon: <Briefcase className="w-8 h-8" />,
     title: "Tourisme d'affaire",
     description: 'Voyages professionnels organisés vers le Nigeria et autres destinations africaines.',
+  },
+  {
+    icon: <Compass className="w-8 h-8" />,
+    title: 'Tourisme culturel',
+    description: "Découverte des richesses culturelles du Gabon et d'Afrique pour les afro-descendants souhaitant renouer avec leurs racines.",
   },
   {
     icon: <Globe className="w-8 h-8" />,
@@ -227,7 +233,7 @@ function HeroSlider() {
                   >
                     <div className="w-2 h-2 rounded-full flex-shrink-0" style={{ background: '#C9A84C' }} />
                     <span className="text-white text-sm font-medium">
-                      {"The Bridge \u2014 Tourisme d'affaires au Nigeria"}
+                      {"The Bridge \u2014 Nigeria · États-Unis · Dubaï · Ghana"}
                     </span>
                   </div>
                 </div>
