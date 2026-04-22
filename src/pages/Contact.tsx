@@ -12,13 +12,13 @@ export function Contact() {
     {
       icon: <Phone className="w-8 h-8" />,
       title: 'Téléphone / WhatsApp',
-      content: '+241 160 354 192',
+      content: '+241 60354192',
       description: 'Disponible pour vos appels et messages',
     },
     {
       icon: <Mail className="w-8 h-8" />,
       title: 'Email',
-      content: 'Nkombe241@gmail.com',
+      content: 'thebridgellc95@gmail.com',
       description: 'Envoyez-nous un email, nous répondons sous 24h',
     },
     {
@@ -177,7 +177,7 @@ export function Contact() {
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <WhatsAppButton className="text-lg px-10 py-4 shadow-xl">WhatsApp</WhatsAppButton>
             <a
-              href="mailto:Nkombe241@gmail.com"
+              href="mailto:thebridgellc95@gmail.com"
               className="inline-flex items-center gap-2 px-10 py-4 rounded-lg transition-all text-lg font-semibold shadow-xl hover:brightness-110"
               style={{ background: '#C9A84C', color: '#1C1C1C' }}
             >

@@ -1,7 +1,7 @@
 import { MessageCircle, Mail, Phone } from 'lucide-react';
 
 export function Footer() {
-  const whatsappNumber = '241160354192';
+  const whatsappNumber = '24160354192';
   const whatsappLink = `https://wa.me/${whatsappNumber}`;
 
   return (
@@ -37,11 +37,11 @@ export function Footer() {
             <ul className="space-y-4 text-gray-400">
               <li className="flex items-center gap-3">
                 <Phone size={20} className="text-[#C9A84C]" />
-                <span>+241 160 354 192</span>
+                <span>+241 60354192</span>
               </li>
               <li className="flex items-center gap-3">
                 <Mail size={20} className="text-[#C9A84C]" />
-                <span>Nkombe241@gmail.com</span>
+                <span>thebridgellc95@gmail.com</span>
               </li>
               <li>
                 <a

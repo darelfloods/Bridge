@@ -115,7 +115,7 @@ export function Payment() {
             <div className="space-y-8">
               <div className="pl-8" style={{ borderLeft: '4px solid #C9A84C' }}>
                 <h3 className="font-semibold text-xl mb-3" style={{ color: '#1C1C1C' }}>Numéro Airtel Money</h3>
-                <p className="text-3xl font-bold" style={{ color: '#1C1C1C' }}>+241 160 354 192</p>
+                <p className="text-3xl font-bold" style={{ color: '#1C1C1C' }}>+241 60354192</p>
               </div>
 
               <div className="pl-8" style={{ borderLeft: '4px solid #C9A84C' }}>
@@ -170,7 +170,7 @@ export function Payment() {
                 </li>
                 <li className="flex gap-4">
                   <span className="font-bold flex-shrink-0" style={{ color: '#C9A84C' }}>4.</span>
-                  <span>Entrez le numéro : <strong>+241 160 354 192</strong></span>
+                  <span>Entrez le numéro : <strong>+241 60354192</strong></span>
                 </li>
                 <li className="flex gap-4">
                   <span className="font-bold flex-shrink-0" style={{ color: '#C9A84C' }}>5.</span>

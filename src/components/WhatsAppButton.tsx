@@ -11,7 +11,7 @@ export function WhatsAppButton({
   className = '',
   children,
 }: WhatsAppButtonProps) {
-  const whatsappNumber = '241160354192';
+  const whatsappNumber = '24160354192';
   const encodedMessage = encodeURIComponent(message);
   const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
 

@@ -102,7 +102,7 @@ function HeroSlider() {
   }, [next]);
 
   const whatsappLink =
-    'https://wa.me/241160354192?text=' +
+    'https://wa.me/24160354192?text=' +
     encodeURIComponent('Bonjour, je souhaite en savoir plus sur vos services.');
 
   return (
