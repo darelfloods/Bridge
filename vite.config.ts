@@ -9,5 +9,11 @@ export default defineConfig({
   ],
   server: {
     allowedHosts: ['beth-diapasonal-zola.ngrok-free.app', 'beth-diapasonal-zola.ngrok-free.dev'],
+    proxy: {
+      '/api': {
+        target: 'http://localhost:3001',
+        changeOrigin: true,
+      },
+    },
   },
 })
