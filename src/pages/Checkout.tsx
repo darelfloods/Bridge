@@ -41,7 +41,6 @@ export function Checkout() {
   const [step, setStep] = useState<Step>('select');
   const [provider, setProvider] = useState<(typeof PROVIDERS)[0] | null>(null);
   const [phone, setPhone] = useState('');
-  const [depositId, setDepositId] = useState<string | null>(null);
   const [errorMsg, setErrorMsg] = useState('');
 
   useEffect(() => {
@@ -81,7 +80,6 @@ export function Checkout() {
       const data = await res.json();
       if (!res.ok) throw new Error(data.message || 'Erreur serveur');
 
-      setDepositId(data.depositId);
       setStep('waiting');
 
       // Polling toutes les 5s
@@ -120,7 +118,6 @@ export function Checkout() {
     setStep('select');
     setProvider(null);
     setPhone('');
-    setDepositId(null);
     setErrorMsg('');
   };
 
