@@ -177,7 +177,7 @@ export function Checkout() {
             </div>
 
             <div className="mt-12 relative z-10 text-sm text-white/60 space-y-1">
-              <p>Paiement sécurisé et chiffré par pawaPay.</p>
+              <p>Paiement sécurisé et chiffré par SingPay.</p>
               <p>Aucune donnée bancaire n'est stockée sur nos serveurs.</p>
             </div>
           </div>

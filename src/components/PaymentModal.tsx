@@ -200,7 +200,7 @@ export function PaymentModal({ offer, onClose }: PaymentModalProps) {
                 </div>
                 <div className="flex items-center gap-2 mt-5 text-xs text-gray-400">
                   <ShieldCheck size={14} />
-                  Paiement chiffré et sécurisé via pawaPay
+                  Paiement chiffré et sécurisé via SingPay
                 </div>
               </motion.div>
             )}
