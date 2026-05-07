@@ -13,6 +13,7 @@ import {
   GraduationCap,
   ShieldCheck,
   X,
+  BookOpen,
 } from "lucide-react";
 
 const featuredOffers = [
@@ -165,6 +166,21 @@ export function Services() {
         "Coiffure et cosmétiques",
         "Accompagnement pratique sur le terrain",
         "Certification et suivi post-formation",
+      ],
+    },
+    {
+      icon: <BookOpen className="w-12 h-12" />,
+      title: "Études et suivis au Ghana",
+      description:
+        "Programme complet d'études de marché, de faisabilité et de suivi de projets au Ghana pour garantir le succès de votre développement commercial en Afrique de l'Ouest.",
+      price: "Sur devis",
+      details: [
+        "Études de marché approfondies",
+        "Analyse de faisabilité des projets",
+        "Identification des partenaires locaux",
+        "Suivi régulier de l'implémentation",
+        "Rapports détaillés et recommandations",
+        "Support continu post-études",
       ],
     },
   ];

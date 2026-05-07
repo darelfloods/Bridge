@@ -10,21 +10,65 @@ const heroImage = '/business-handshake-hd.jpg';
 const visites = [
   {
     id: 1,
-    src: '/visite-nigeria.mp4',
-    title: 'Visite terrain — Nigeria',
-    description: 'Découverte des opportunités commerciales et rencontres avec nos partenaires sur place.',
+    src: '/notre-representante-lagos.mp4',
+    title: 'Notre représentante à Lagos',
+    channel: 'The Bridge Consulting',
+    views: '2,1 k vues',
+    date: 'il y a 1 semaine',
   },
   {
     id: 2,
-    src: '/visite-nigeria-2.mp4',
+    src: '/suivis-etudiant-ghana.mp4',
+    title: 'Suivis étudiant au Ghana',
+    channel: 'The Bridge Consulting',
+    views: '3,4 k vues',
+    date: 'il y a 1 semaine',
+  },
+  {
+    id: 3,
+    src: '/voyage-nigeria-delegation.mp4',
+    title: 'Voyage au Nigeria avec une délégation',
+    channel: 'The Bridge Consulting',
+    views: '5,7 k vues',
+    date: 'il y a 2 semaines',
+  },
+  {
+    id: 4,
+    src: '/voyage-sur-mesure.mp4',
+    title: 'Destination Nigeria — Voyage sur mesure',
+    channel: 'The Bridge Consulting',
+    views: '4,2 k vues',
+    date: 'il y a 2 semaines',
+  },
+  {
+    id: 5,
+    src: '/visite-nigeria.mp4',
     title: 'Visite terrain — Nigeria',
-    description: 'Exploration des marchés et centres de production pour nos clients.',
+    channel: 'The Bridge Consulting',
+    views: '8,9 k vues',
+    date: 'il y a 1 mois',
+  },
+  {
+    id: 6,
+    src: '/visite-nigeria-2.mp4',
+    title: 'Exploration des marchés et centres de production',
+    channel: 'The Bridge Consulting',
+    views: '6,5 k vues',
+    date: 'il y a 1 mois',
   },
 ];
+
+function formatDuration(seconds: number): string {
+  if (!isFinite(seconds) || seconds <= 0) return '';
+  const m = Math.floor(seconds / 60);
+  const s = Math.floor(seconds % 60);
+  return `${m}:${s.toString().padStart(2, '0')}`;
+}
 
 function VisiteCard({ visite, index }: { visite: typeof visites[0]; index: number }) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [duration, setDuration] = useState<string>('');
 
   const handlePlay = () => {
     if (videoRef.current) {
@@ -37,16 +81,22 @@ function VisiteCard({ visite, index }: { visite: typeof visites[0]; index: numbe
     }
   };
 
+  const handleLoadedMetadata = () => {
+    if (videoRef.current) {
+      setDuration(formatDuration(videoRef.current.duration));
+    }
+  };
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay: index * 0.15 }}
+      transition={{ duration: 0.5, delay: index * 0.08 }}
       viewport={{ once: true }}
-      className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow"
+      className="flex flex-col"
     >
       <div
-        className="relative aspect-[9/16] cursor-pointer group"
+        className="relative aspect-video cursor-pointer group overflow-hidden rounded-xl bg-gray-100"
         onClick={handlePlay}
       >
         <video
@@ -55,19 +105,48 @@ function VisiteCard({ visite, index }: { visite: typeof visites[0]; index: numbe
           className="w-full h-full object-cover"
           playsInline
           controls={isPlaying}
+          preload="metadata"
+          onLoadedMetadata={handleLoadedMetadata}
           onEnded={() => setIsPlaying(false)}
         />
         {!isPlaying && (
-          <div className="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/20 transition-colors">
-            <div className="w-16 h-16 rounded-full bg-white/90 flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform">
-              <Play size={28} className="ml-1" style={{ color: '#1C1C1C' }} />
+          <>
+            <div className="absolute inset-0 flex items-center justify-center bg-black/0 group-hover:bg-black/20 transition-colors">
+              <div className="w-14 h-14 rounded-full bg-white/95 flex items-center justify-center shadow-xl opacity-0 group-hover:opacity-100 group-hover:scale-100 scale-90 transition-all duration-200">
+                <Play size={24} className="ml-1" style={{ color: '#1C1C1C' }} fill="#1C1C1C" />
+              </div>
             </div>
-          </div>
+            {duration && (
+              <div className="absolute bottom-2 right-2 bg-black/85 text-white text-xs font-medium px-1.5 py-0.5 rounded">
+                {duration}
+              </div>
+            )}
+          </>
         )}
       </div>
-      <div className="p-6">
-        <h3 className="text-xl font-bold mb-2" style={{ color: '#1C1C1C' }}>{visite.title}</h3>
-        <p className="text-gray-600">{visite.description}</p>
+      <div className="flex gap-3 mt-3">
+        <div className="flex-shrink-0">
+          <div
+            className="w-9 h-9 rounded-full flex items-center justify-center overflow-hidden"
+            style={{ background: '#1C1C1C' }}
+          >
+            <img src="/logo.png" alt="The Bridge" className="w-full h-full object-cover" />
+          </div>
+        </div>
+        <div className="flex-1 min-w-0">
+          <h3
+            className="text-[15px] font-semibold leading-snug line-clamp-2 mb-1"
+            style={{ color: '#0F0F0F' }}
+          >
+            {visite.title}
+          </h3>
+          <p className="text-[13px] text-gray-600 hover:text-gray-900 transition-colors cursor-pointer">
+            {visite.channel}
+          </p>
+          <p className="text-[13px] text-gray-600">
+            {visite.views} • {visite.date}
+          </p>
+        </div>
       </div>
     </motion.div>
   );
@@ -113,14 +192,14 @@ export function Testimonials() {
             className="text-center mb-12"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{ color: '#1C1C1C' }}>
-              Nos visites sur le terrain
+              Nos visites & Témoignages en vidéo
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Suivez-nous lors de nos voyages d'affaires au Nigeria
+              Découvrez nos missions et suivis sur le terrain en Afrique de l'Ouest
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-x-4 gap-y-10">
             {visites.map((visite, i) => (
               <VisiteCard key={visite.id} visite={visite} index={i} />
             ))}
